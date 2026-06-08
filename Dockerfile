@@ -6,7 +6,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Archivos de la landing
-COPY index.html styles.css script.js /usr/share/nginx/html/
+COPY index.html styles.css script.js favicon.svg /usr/share/nginx/html/
 
 EXPOSE 80
 
