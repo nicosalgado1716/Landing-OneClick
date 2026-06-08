@@ -81,7 +81,7 @@ img { max-width: 100%; display: block; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; }
 .brand__mark {
   width: 32px; height: 32px; border-radius: 9px; background: var(--grad);
-  display: grid; place-items: center; color: #06210f; font-family: 'Sora'; font-weight: 800; font-size: 18px;
+  display: grid; place-items: center; color: #fff; font-family: 'Sora'; font-weight: 800; font-size: 18px;
 }
 .nav__links { display: flex; gap: 28px; margin-left: auto; }
 .nav__links a { color: var(--text-2); font-size: 15px; font-weight: 500; transition: color .2s; }
