@@ -101,10 +101,12 @@
   var CALENDLY_URL = 'https://calendly.com/oneclickcontentgroup/90min';
   document.querySelectorAll('.js-book').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      // Si el widget de Calendly cargó, abrimos el popup; si no, dejamos el scroll a #agenda.
+      e.preventDefault();
       if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
-        e.preventDefault();
         window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        // Fallback: si el widget de Calendly no cargó (bloqueado/lento), abrimos en pestaña nueva.
+        window.open(CALENDLY_URL, '_blank', 'noopener');
       }
     });
   });
