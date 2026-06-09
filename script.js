@@ -97,18 +97,23 @@
     statNums.forEach(function (el) { statIO.observe(el); });
   }
 
-  /* --- Placeholders de video / Calendly ---
-     Reemplaza estos handlers por tu embed real (YouTube/Vimeo/Calendly). */
+  /* --- Calendly (popup) --- */
+  var CALENDLY_URL = 'https://calendly.com/oneclickcontentgroup/90min';
+  document.querySelectorAll('.js-book').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      // Si el widget de Calendly cargó, abrimos el popup; si no, dejamos el scroll a #agenda.
+      if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+        e.preventDefault();
+        window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+      }
+    });
+  });
+
+  /* --- Placeholder de video / VSL ---
+     Reemplaza este handler por tu embed real (YouTube/Vimeo). */
   document.querySelectorAll('.video-frame').forEach(function (frame) {
     frame.addEventListener('click', function () {
       console.log('[OneClick] Inserta aquí tu video (YouTube/Vimeo/VSL).');
     });
   });
-  var bookBtn = document.getElementById('bookBtn');
-  if (bookBtn) {
-    bookBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      console.log('[OneClick] Conecta tu enlace de Calendly aquí.');
-    });
-  }
 })();

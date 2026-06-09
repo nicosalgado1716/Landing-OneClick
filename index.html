@@ -19,6 +19,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Calendly (popup) -->
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -36,7 +40,7 @@
         <a href="#casos">Resultados</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="#agenda" class="btn btn--primary btn--sm">Agenda tu llamada</a>
+      <a href="#agenda" class="btn btn--primary btn--sm js-book">Agenda tu llamada</a>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -47,7 +51,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#casos">Resultados</a>
       <a href="#faq">FAQ</a>
-      <a href="#agenda" class="btn btn--primary">Agenda tu llamada gratuita</a>
+      <a href="#agenda" class="btn btn--primary js-book">Agenda tu llamada gratuita</a>
     </div>
   </header>
 
@@ -68,7 +72,7 @@
         tu audiencia en oportunidades reales de negocio.
       </p>
       <div class="hero__cta">
-        <a href="#agenda" class="btn btn--primary btn--lg">Agenda tu llamada gratuita</a>
+        <a href="#agenda" class="btn btn--primary btn--lg js-book">Agenda tu llamada gratuita</a>
         <a href="#casos" class="btn btn--ghost btn--lg">Ver casos de éxito</a>
       </div>
 
@@ -124,7 +128,7 @@
       </div>
 
       <div class="center" style="margin-top:32px;">
-        <a href="#agenda" class="btn btn--primary btn--lg">Quiero aplicar esto a mi marca → Agenda tu llamada</a>
+        <a href="#agenda" class="btn btn--primary btn--lg js-book">Quiero aplicar esto a mi marca → Agenda tu llamada</a>
         <p class="micro">Sin compromiso · 30 minutos · 100% gratis</p>
       </div>
     </div>
@@ -201,7 +205,7 @@
             <li>Crecimiento orgánico sostenible</li>
             <li>Sistema para convertir audiencia en prospectos</li>
           </ul>
-          <a href="#agenda" class="btn btn--primary btn--lg">Quiero este sistema para mi marca</a>
+          <a href="#agenda" class="btn btn--primary btn--lg js-book">Quiero este sistema para mi marca</a>
         </div>
         <div class="solution__visual">
           <div class="orbit-card">
@@ -302,34 +306,48 @@
   <section class="section results" id="casos">
     <div class="container">
       <div class="section__head center">
-        <span class="eyebrow">Resultados</span>
-        <h2 class="section__title">Números que hablan por nuestras marcas</h2>
-        <p class="section__lead">Resultados promedio observados en cuentas gestionadas por OneClick.*</p>
+        <span class="eyebrow">Casos de éxito</span>
+        <h2 class="section__title">Resultados reales, no promesas</h2>
+        <p class="section__lead">
+          Estos son resultados concretos generados liderando la estrategia, producción y
+          monetización de contenido para distintos proyectos. Más de 3.000 millones de vistas acumuladas.
+        </p>
       </div>
       <div class="grid grid--4 stats">
-        <div class="stat"><div class="stat__num" data-target="380" data-suffix="%">0%</div><p>Incremento de alcance</p></div>
-        <div class="stat"><div class="stat__num" data-target="12" data-suffix="K+">0</div><p>Seguidores cualificados</p></div>
-        <div class="stat"><div class="stat__num" data-target="5" data-suffix="x">0x</div><p>Más mensajes entrantes</p></div>
-        <div class="stat"><div class="stat__num" data-target="3" data-suffix="x">0x</div><p>Más llamadas agendadas</p></div>
+        <div class="stat"><div class="stat__num" data-target="3" data-suffix="B+">0</div><p>Vistas generadas</p></div>
+        <div class="stat"><div class="stat__num" data-target="5" data-suffix="M+">0</div><p>Seguidores en &lt;6 meses</p></div>
+        <div class="stat"><div class="stat__num" data-target="200" data-suffix="K+">0</div><p>Seguidores (de 2.000)</p></div>
+        <div class="stat"><div class="stat__num" data-target="2500" data-suffix="+">0</div><p>Alumnos generados</p></div>
       </div>
       <div class="grid grid--3 cases">
         <div class="case">
-          <span class="case__tag">Coach de negocios</span>
-          <h3>De 800 a 9.400 seguidores en 90 días</h3>
-          <p>Estrategia de reels educativos + optimización de perfil. <strong>+11 llamadas/semana.</strong></p>
+          <span class="case__tag">Educación · Academia</span>
+          <h3>De 2.000 a +200.000 seguidores</h3>
+          <p>
+            <strong>Katedra.</strong> Partía de menos de 100 alumnos. Lideramos estrategia, producción
+            y monetización hasta superar los <strong>2.500 alumnos</strong> y cientos de millones de vistas,
+            que se tradujeron en <strong>cientos de miles de dólares</strong> de facturación.
+          </p>
         </div>
         <div class="case">
-          <span class="case__tag">Negocio local</span>
-          <h3>+260% de engagement en 2 meses</h3>
-          <p>Contenido local con guiones optimizados. <strong>Agenda de reservas completa.</strong></p>
+          <span class="case__tag">Medios · Infoproductos</span>
+          <h3>De &lt;1M a +5M seguidores en 6 meses</h3>
+          <p>
+            <strong>School of Hard Knocks.</strong> Escalamos la página a más de <strong>5 millones de
+            seguidores</strong> en menos de 6 meses. Profit de <strong>cinco cifras mensuales</strong> solo
+            con Facebook, más cientos de miles de dólares al mes en infoproductos.
+          </p>
         </div>
         <div class="case">
-          <span class="case__tag">Empresa B2B</span>
-          <h3>x4 mensajes entrantes cualificados</h3>
-          <p>Autoridad en LinkedIn + sistema de conversión. <strong>Pipeline lleno cada mes.</strong></p>
+          <span class="case__tag">Emprendimiento · E-commerce</span>
+          <h3>$7.000–$10.000/mes recurrentes</h3>
+          <p>
+            <strong>Budiné.</strong> Un emprendimiento sin verticales de monetización claras. Definimos y
+            digitalizamos un infoproducto y lo comercializamos con contenido orgánico + ads, logrando una
+            <strong>ganancia estable de 7 a 10 mil dólares al mes</strong>.
+          </p>
         </div>
       </div>
-      <p class="micro center">*Resultados ilustrativos. Los resultados varían según nicho, punto de partida y constancia.</p>
     </div>
   </section>
 
@@ -356,8 +374,8 @@
     <div class="container">
       <div class="schedule__grid">
         <div class="schedule__copy">
-          <span class="eyebrow">Tu llamada gratuita</span>
-          <h2 class="section__title">Agenda una sesión estratégica gratuita de 30 minutos</h2>
+          <span class="eyebrow">Tu sesión estratégica</span>
+          <h2 class="section__title">Agenda una sesión estratégica gratuita de 90 minutos</h2>
           <p class="section__lead">En esta llamada, sin compromiso, vamos a revisar contigo:</p>
           <ul class="checklist">
             <li>El estado actual de tu marca y tus redes</li>
@@ -373,14 +391,12 @@
         </div>
 
         <div class="schedule__widget">
-          <!-- Calendly placeholder: reemplaza el src por tu enlace real de Calendly -->
           <div class="calendly" id="calendly">
             <div class="calendly__inner">
               <div class="calendly__icon">📅</div>
-              <h3>Reserva tu horario</h3>
-              <p>Aquí se integrará tu calendario de Calendly.<br />
-                <code>&lt;!-- Calendly inline widget --&gt;</code></p>
-              <a href="#" class="btn btn--primary btn--lg" id="bookBtn">Reservar mi llamada</a>
+              <h3>Reserva tu sesión de 90 min</h3>
+              <p>Elige el día y la hora que mejor te venga. Al hacer clic se abrirá el calendario para confirmar tu llamada.</p>
+              <a href="#agenda" class="btn btn--primary btn--lg js-book" id="bookBtn">Reservar mi llamada</a>
               <p class="micro">Recibirás confirmación al instante por email.</p>
             </div>
           </div>
@@ -431,7 +447,7 @@
       <div class="final-cta__box">
         <h2>Tu próxima etapa de crecimiento empieza con un click</h2>
         <p>Deja de publicar al azar. Construye una marca con autoridad, contenido profesional y un sistema que convierte. Da el primer paso hoy.</p>
-        <a href="#agenda" class="btn btn--primary btn--xl">Agenda tu llamada gratuita</a>
+        <a href="#agenda" class="btn btn--primary btn--xl js-book">Agenda tu llamada gratuita</a>
         <p class="micro">Sesión estratégica de 30 min · Sin compromiso · Plazas limitadas</p>
       </div>
     </div>
@@ -449,7 +465,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#casos">Resultados</a>
         <a href="#faq">FAQ</a>
-        <a href="#agenda">Agenda tu llamada</a>
+        <a href="#agenda" class="js-book">Agenda tu llamada</a>
       </div>
     </div>
     <div class="container footer__bottom">
@@ -459,7 +475,7 @@
   </footer>
 
   <!-- Sticky mobile CTA -->
-  <a href="#agenda" class="sticky-cta">Agenda tu llamada gratuita</a>
+  <a href="#agenda" class="sticky-cta js-book">Agenda tu llamada gratuita</a>
 
   <script src="script.js"></script>
 </body>
